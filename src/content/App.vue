@@ -19,6 +19,4 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>
-@import '../style/popup.less';
-</style>
+<style lang="less" scoped></style>

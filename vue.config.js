@@ -30,20 +30,20 @@ module.exports = {
   productionSourceMap: false,
   pages: {
     popup: {
-      entry: `src/popup/index.js`,
-      template: `pages/popup.html`,
-      filename: `pages/popup.html`
-    },
-    options: {
-      entry: `src/options/index.js`,
-      template: `pages/options.html`,
-      filename: `pages/options.html`
+      entry: 'src/popup/index.js',
+      template: 'pages/popup.html',
+      filename: 'pages/popup.html'
     }
+    // options: {
+    //   entry: 'src/options/index.js',
+    //   template: 'pages/options.html',
+    //   filename: 'pages/options.html'
+    // }
   },
   configureWebpack: {
     mode: isDev ? 'development' : 'production',
     entry: {
-      content: './src/content/index.js',
+      // content: './src/content/index.js',
       background: './src/background/index.js'
     },
     output: {
