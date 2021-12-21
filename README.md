@@ -4,30 +4,28 @@
 
 基于 [create-crx-app](https://github.com/Jcanno/create-crx-app) 创建的 [lychee](https://lycheeorg.github.io/docs/org.html) 图片上传插件
 
-## Project setup
+## use 使用
 
-```
-yarn install
-```
+1. 打开 Chrome 扩展程序设置页面
 
-### Compiles and hot-reloads for development
+![打开 Chrome 扩展程序设置页面](https://github.com/mrabit/chrome-extension-lychee-upload/raw/master/example/step1.png)
 
-```
-yarn serve
-```
+2. 页面右上角打开【开发者模式】
 
-### Compiles and minifies for production
+![页面右上角打开【开发者模式】](https://github.com/mrabit/chrome-extension-lychee-upload/raw/master/example/step2.png)
 
-```
-yarn build
-```
+3. 选择页面左上角【加载已解压的扩展程序】选中解压后的扩展程序目录
 
-### Lints and fixes files
+![选择页面左上角【加载已解压的扩展程序】选中解压后的扩展程序目录](https://github.com/mrabit/chrome-extension-lychee-upload/raw/master/example/step3.png)
 
-```
-yarn lint
-```
+4. 填写自建 lychee 域名和账号密码登录
 
-### Customize configuration
+![填写自建 lychee 域名和账号密码登录](https://github.com/mrabit/chrome-extension-lychee-upload/raw/master/example/step4.png)
 
-See [Configuration Reference](https://cli.vuejs.org/config/).
+5. 点击或者拖拽图片到指定区域
+
+![点击或者拖拽图片到指定区域](https://github.com/mrabit/chrome-extension-lychee-upload/raw/master/example/step5.png)
+
+6. 上传成功后获取链接地址
+
+![上传成功后获取链接地址](https://github.com/mrabit/chrome-extension-lychee-upload/raw/master/example/step6.png)
