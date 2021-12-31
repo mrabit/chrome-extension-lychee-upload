@@ -87,22 +87,24 @@ export default {
           url: `${getDomain()}/${_photo.url}`,
           width: _photo.width,
           height: _photo.height
-        },
+        }
+      ]
+      if (_photo.sizeVariants.thumb)
         // 方形缩略图
-        {
+        photo.value.push({
           key: 'thumb',
           url: `${getDomain()}/${_photo.sizeVariants.thumb.url}`,
           width: _photo.sizeVariants.thumb.width,
           height: _photo.sizeVariants.thumb.height
-        },
+        })
+      if (_photo.sizeVariants.small)
         // 缩略图
-        {
+        photo.value.push({
           key: 'small',
           url: `${getDomain()}/${_photo.sizeVariants.small.url}`,
           width: _photo.sizeVariants.small.width,
           height: _photo.sizeVariants.small.height
-        }
-      ]
+        })
       uploadDercentage.value = 100
       setTimeout(() => {
         isupload.value = false
