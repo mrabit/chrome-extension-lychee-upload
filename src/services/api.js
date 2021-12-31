@@ -6,28 +6,29 @@
  */
 import { getCookie } from '@/helper'
 import axios from 'axios'
+import wsCache from '../plugins/storage'
 
-let domain = localStorage.getItem('domain')
-let username = localStorage.getItem('username')
-let password = localStorage.getItem('password')
+let domain = wsCache.get('domain')
+let username = wsCache.get('username')
+let password = wsCache.get('password')
 
 const getDomain = () => domain
 const setDoamin = url => {
   domain = url
-  localStorage.setItem('domain', domain)
+  wsCache.set('domain', domain)
   api.defaults.baseURL = domain
 }
 
 const getUserName = () => username
 const setUserName = _username => {
   username = _username
-  localStorage.setItem('username', username)
+  wsCache.set('username', username)
 }
 
 const getPassword = () => password
 const setPassword = _password => {
   password = _password
-  localStorage.setItem('password', password)
+  wsCache.set('password', password)
 }
 
 const api = axios.create({

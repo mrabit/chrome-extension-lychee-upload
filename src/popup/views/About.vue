@@ -49,12 +49,13 @@ import { getDomain, addPhoto, getPhoto } from '../../services/api'
 import { ref } from 'vue-demi'
 import * as clipboard from 'clipboard-polyfill/text'
 import { ElMessage } from 'element-plus'
+import wsCache from '../../plugins/storage'
 export default {
   setup() {
     const router = useRouter()
     let uploadDercentage = ref(0)
     let isupload = ref(false)
-    let photo = ref(null)
+    let photo = ref(wsCache.get('photo'))
 
     function handleClickOpen() {
       window.open(getDomain())
@@ -108,6 +109,9 @@ export default {
       uploadDercentage.value = 100
       setTimeout(() => {
         isupload.value = false
+        wsCache.set('photo', photo.value, {
+          exp: 15 * 60
+        })
       }, 300)
     }
 
